@@ -1,5 +1,6 @@
 import React from 'react';
 import Backdrop from "./Backdrop";
+import Button from "./Button";
 
 const Modal = ({ onCancel, onConfirm, show, children }) => {
     const cancelHandler = () => {
@@ -15,13 +16,8 @@ const Modal = ({ onCancel, onConfirm, show, children }) => {
             <div className={`modal ${!show ? 'inactive-modal' : ''}`}>
                 <div className='modal-body'>
                     {children}
-                    <button className="btn btn--alt" onClick={cancelHandler}>
-                        {' '}
-                        Cancel
-                    </button>
-                    <button className="btn" onClick={confirmHandler}>
-                        Confirm
-                    </button>
+                    <Button clickHandler={cancelHandler} isAlt label="Cancel" />
+                    <Button clickHandler={confirmHandler} label="Confirm" />
                 </div>
             </div>
         </>
