@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {setEmployeesList} from "../store/actions/EmployeesListActions";
 import Employee from "./Employee";
+import EditEmployeeModal from "../components/modals/EditEmployeeModal";
 
 const EmployeesPage = () => {
     const  dispatch = useDispatch(),
@@ -10,8 +11,6 @@ const EmployeesPage = () => {
     useEffect(() => {
         dispatch(setEmployeesList());
     }, [dispatch]);
-
-    console.log(employeesList);
 
     return (
         <div className='container'>
@@ -28,6 +27,7 @@ const EmployeesPage = () => {
                     />
                 ))}
             </div>
+            <EditEmployeeModal />
         </div>
     );
 };
