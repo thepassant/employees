@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import NotFoundPage from "./containers/NotFoundPage";
 import HomePage from "./containers/HomePage";
 import EmployeesPage from "./containers/EmployeesPage";
+import Footer from "./components/Footer";
 
 const App = () => (
     <div className="App">
@@ -17,6 +18,7 @@ const App = () => (
             />
             <Route path="*" element={<NotFoundPage />} />
         </Routes>
+        <Footer />
     </div>
   );
 
