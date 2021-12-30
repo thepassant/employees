@@ -1,3 +1,32 @@
 .employee {
+  text-align: center;
+  border: 1px solid #ffffff;
+  user-select: none;
 
+  &:hover {
+    border: 1px solid #000000;
+    cursor: pointer;
+  }
+
+  .employee-header {
+    padding: 5px;
+    background-color: #8edbdb;
+
+    .name {
+      text-transform: capitalize;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .employee-body {
+    background-color: blue;
+    padding: 5px;
+
+    p {
+      margin: 0;
+      padding: 3px  0;
+      color: #ffffff;
+    }
+  }
 }
