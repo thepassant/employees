@@ -1,11 +1,11 @@
 import React from 'react';
 
-const HomePage = () => {
-    return (
-        <div>
-            This is the home page
-        </div>
-    );
-};
+const HomePage = () => (
+    <div className='welcome'>
+        <img
+            src={`${process.env.PUBLIC_URL}/Amdocs.jpg`}
+            alt="amdocs"/>
+    </div>
+)
 
 export default HomePage;
