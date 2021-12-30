@@ -9,17 +9,19 @@ import Header from "./containers/Header";
 const App = () => (
     <div className="App">
         <Header />
-        <Routes>
-            <Route
-                path="/"
-                element={<HomePage />}
-            />
-            <Route
-                path="/employees"
-                element={<EmployeesPage />}
-            />
-            <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+        <main>
+            <Routes>
+                <Route
+                    path="/"
+                    element={<HomePage />}
+                />
+                <Route
+                    path="/employees"
+                    element={<EmployeesPage />}
+                />
+                <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+        </main>
         <Footer />
     </div>
   );
