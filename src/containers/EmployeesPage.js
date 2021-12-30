@@ -18,12 +18,7 @@ const EmployeesPage = () => {
                 {employeesList.map((el) => (
                     <Employee
                         key={el.id}
-                        name={el.name}
-                        email={el.email}
-                        city={el.address.city}
-                        phone={el.phone}
-                        website={el.website}
-                        companyName={el.company.name}
+                        data={el}
                     />
                 ))}
             </div>

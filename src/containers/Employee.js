@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from "../components/UI/Card";
 import {useDispatch} from "react-redux";
-import {openEditEmployeeModal} from "../store/actions/EmployeesListActions";
+import {openEditEmployeeModal, setEmployeeDataToEdit} from "../store/actions/EmployeesListActions";
 import {
     setEmployeeCity, setEmployeeCompanyName,
     setEmployeeEmail,
@@ -9,8 +9,9 @@ import {
     setEmployeePhone, setEmployeeWebsite
 } from "../store/actions/EditEmployeeDataActions";
 
-const Employee = ({name, email, city, phone, website, companyName}) => {
-    const dispatch = useDispatch();
+const Employee = ({data}) => {
+    const dispatch = useDispatch(),
+        {name, email,phone, website,  address: {city},  company} =  data;
 
     const doubleClickHandler = () => {
         dispatch(setEmployeeName(name));
@@ -18,7 +19,8 @@ const Employee = ({name, email, city, phone, website, companyName}) => {
         dispatch(setEmployeeCity(city));
         dispatch(setEmployeePhone(phone));
         dispatch(setEmployeeWebsite(website));
-        dispatch(setEmployeeCompanyName(companyName));
+        dispatch(setEmployeeCompanyName(company.name));
+        dispatch(setEmployeeDataToEdit(data));
         dispatch(openEditEmployeeModal());
     };
 
@@ -33,7 +35,7 @@ const Employee = ({name, email, city, phone, website, companyName}) => {
                     <p>{city}</p>
                     <p>{phone}</p>
                     <p>{website}</p>
-                    <p>{companyName}</p>
+                    <p>{company.name}</p>
                 </div>
             </Card>
         </>

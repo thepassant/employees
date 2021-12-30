@@ -1,7 +1,11 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import Modal from "../UI/Modal";
-import {closeEditEmployeeModal} from "../../store/actions/EmployeesListActions";
+import {
+    closeEditEmployeeModal,
+    setEmployeeDataToEdit,
+    updateEmployeeData
+} from "../../store/actions/EmployeesListActions";
 import EditEmployeeForm from "../../containers/EditEmployeeForm";
 
 const EditEmployeeModal = () => {
@@ -16,10 +20,11 @@ const EditEmployeeModal = () => {
 
     const closeModalHandler = () => {
         dispatch(closeEditEmployeeModal());
+        dispatch(setEmployeeDataToEdit({}));
     }
 
     const editDataHandler = () => {
-        console.log('edit data');
+        dispatch(updateEmployeeData());
     }
 
     return (

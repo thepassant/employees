@@ -3,7 +3,11 @@
   border-radius: 4px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 280px;
+  max-width: 100%;
   margin: 10px;
   overflow: hidden;
+
+  @media (min-width: 647px) {
+    max-width: 280px;
+  }
 }
