@@ -13,6 +13,11 @@
     border-color: #9c1458;
   }
 
+  &:disabled {
+    background-color: #a73870;
+    cursor: not-allowed;
+  }
+
   &.btn--alt {
     background-color: transparent;
     color: #800040;

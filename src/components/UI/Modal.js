@@ -2,7 +2,7 @@ import React from 'react';
 import Backdrop from "./Backdrop";
 import Button from "./Button";
 
-const Modal = ({ title, onCancel, onConfirm, show, children }) => {
+const Modal = ({ title, onCancel, onConfirm, show, isConfirmDisabled, children }) => {
     const cancelHandler = () => {
         onCancel();
     };
@@ -19,7 +19,7 @@ const Modal = ({ title, onCancel, onConfirm, show, children }) => {
                     {children}
                     <div className='btns-wrapper'>
                         <Button clickHandler={cancelHandler} isAlt label="Cancel" />
-                        <Button clickHandler={confirmHandler} label="Confirm" />
+                        <Button clickHandler={confirmHandler} disabled={isConfirmDisabled} label="Confirm" />
                     </div>
                 </div>
             </div>
