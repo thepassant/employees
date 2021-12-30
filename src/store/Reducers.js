@@ -1,9 +1,9 @@
 
 import { combineReducers } from 'redux';
-import employeesList from './reducers/EmployeesListReducer';
+import employeesListReducer from './reducers/EmployeesListReducer';
 
 const rootReducer = combineReducers({
-    employeesList
+    employeesListReducer
 });
 
 export default rootReducer;
