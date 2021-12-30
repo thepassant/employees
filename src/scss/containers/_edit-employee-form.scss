@@ -1,0 +1,19 @@
+.form-wrapper {
+  padding: 10px;
+  text-align: left;
+
+  .input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+
+    input {
+      flex-basis: 70%;
+    }
+
+    label {
+      flex-basis: 25%;
+    }
+  }
+}

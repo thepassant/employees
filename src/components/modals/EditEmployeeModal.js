@@ -2,6 +2,7 @@ import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import Modal from "../UI/Modal";
 import {closeEditEmployeeModal} from "../../store/actions/EmployeesListActions";
+import EditEmployeeForm from "../../containers/EditEmployeeForm";
 
 const EditEmployeeModal = () => {
     const  dispatch = useDispatch(),
@@ -20,8 +21,9 @@ const EditEmployeeModal = () => {
             onCancel={closeModalHandler}
             onConfirm={editDataHandler}
             show={isEditEmployeeModal}
+            title='Edit employee'
         >
-            Edit employee modal
+            <EditEmployeeForm />
         </Modal>
     );
 };

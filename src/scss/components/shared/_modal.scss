@@ -23,7 +23,17 @@
     max-width: 600px;
     width: 100%;
     margin: 20px auto;
-    text-align: center;
+    text-align: left;
+
+    .title {
+      margin: 0;
+      padding-bottom: 20px;
+    }
+
+    .btns-wrapper {
+      text-align: right;
+      padding-top: 20px;
+    }
   }
 }
 
