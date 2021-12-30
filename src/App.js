@@ -1,20 +1,23 @@
-import React, {useEffect} from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {setEmployeesList} from "./store/actions/EmployeesListActions";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import NotFoundPage from "./containers/NotFoundPage";
+import HomePage from "./containers/HomePage";
+import EmployeesPage from "./containers/EmployeesPage";
 
-function App() {
-    const  dispatch = useDispatch(),
-        employeesList = useSelector((state) =>  state.employeesListReducer.employeesList);
-
-    useEffect(() => {
-        dispatch(setEmployeesList());
-    }, [dispatch]);
-
-    return (
+const App = () => (
     <div className="App">
-      employees app
+        <Routes>
+            <Route
+                path="/"
+                element={<HomePage />}
+            />
+            <Route
+                path="/employees"
+                element={<EmployeesPage />}
+            />
+            <Route path="*" element={<NotFoundPage />} />
+        </Routes>
     </div>
   );
-}
 
 export default App;
