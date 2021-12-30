@@ -4,9 +4,11 @@ import NotFoundPage from "./containers/NotFoundPage";
 import HomePage from "./containers/HomePage";
 import EmployeesPage from "./containers/EmployeesPage";
 import Footer from "./components/Footer";
+import Header from "./containers/Header";
 
 const App = () => (
     <div className="App">
+        <Header />
         <Routes>
             <Route
                 path="/"

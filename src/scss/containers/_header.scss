@@ -1,0 +1,32 @@
+.navbar{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  .menu{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+
+    .nav-item{
+      color: #56CCF2;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      transition: 0.2s;
+      text-decoration: none;
+
+      &:hover{
+        transition: 0.2s;
+        text-decoration: underline;
+      }
+
+      &.active {
+        color: #2F80ED;
+      }
+    }
+  }
+}
